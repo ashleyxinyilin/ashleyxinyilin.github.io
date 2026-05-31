@@ -1,27 +1,463 @@
-Ashley Xinyi Lin ·
-HOME
-ABOUT
-EXPERIENCE
-SKILLS
-CONTACT
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ashley Xinyi Lin — Partner Success & Business Development | Düsseldorf</title>
+<meta name="description" content="Ashley Xinyi Lin — Senior Account & BD Manager specialising in APAC–Europe market entry. Trilingual: Mandarin, German, English. Based in Düsseldorf, Germany.">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#edf2ed;
+  --bg2:#e4ebe4;
+  --bg3:#d8e2d8;
+  --navy:#2e3d2e;
+  --navy2:#3d4e3d;
+  --text:#1a221a;
+  --muted:#566056;
+  --light:#8a988a;
+  --border:#ccd6cc;
+  --border2:#bccbb9;
+  --accent:#2e3d2e;
+  --accent2:#3d4e3d;
+  --white:#f0f5f0;
+}
+body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);font-size:15px;line-height:1.7;overflow-x:hidden}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1rem 3rem;border-bottom:1px solid var(--border);background:rgba(237,242,237,0.97);backdrop-filter:blur(12px)}
+.nav-logo{font-family:'Instrument Serif',serif;font-size:18px;color:var(--navy);cursor:pointer;letter-spacing:.3px}
+.nav-logo span{color:var(--light)}
+.nav-links{display:flex;gap:2.5rem}
+.nav-links a{font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color .2s;cursor:pointer;font-weight:500}
+.nav-links a:hover,.nav-links a.active{color:var(--navy)}
+.nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
+.nav-hamburger span{display:block;width:22px;height:1.5px;background:var(--navy);transition:all .3s}
+.page{display:none;padding-top:62px;animation:up .3s ease}
+.page.active{display:block}
+@keyframes up{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.hero{min-height:calc(100vh - 62px);display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:0;padding:0}
+.hero-left{padding:5rem 3rem 5rem 3rem;display:flex;flex-direction:column;justify-content:center}
+.hero-right{background:#2e3d2e;min-height:calc(100vh - 62px);display:flex;flex-direction:column;justify-content:flex-end;padding:3rem;position:relative;overflow:hidden}
+.hero-right-bg{position:absolute;inset:0;opacity:.06;font-family:'Instrument Serif',serif;font-size:200px;color:white;display:flex;align-items:center;justify-content:center;pointer-events:none;line-height:1;overflow:hidden;white-space:nowrap}
+.avail{display:inline-flex;align-items:center;gap:.5rem;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;padding:.35rem .9rem;border:1px solid var(--border2);color:var(--muted);margin-bottom:1.8rem;width:fit-content}
+.avail span{width:6px;height:6px;background:#22c55e;border-radius:50%;animation:pulse 2s infinite;flex-shrink:0}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+.hero-label{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:1rem;font-weight:500}
+.hero-name{font-family:'Instrument Serif',serif;font-size:clamp(44px,5.5vw,72px);line-height:1.05;color:var(--navy);margin-bottom:.8rem}
+.hero-name em{font-style:italic;color:var(--muted)}
+.hero-role{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--navy);margin-bottom:1.5rem;border-left:2px solid var(--navy);padding-left:.9rem;font-weight:500}
+.hero-desc{font-size:15px;color:var(--muted);line-height:1.9;max-width:440px;margin-bottom:2.5rem}
+.hero-ctas{display:flex;gap:1rem;flex-wrap:wrap}
+.btn-dark{display:inline-flex;align-items:center;gap:8px;padding:.7rem 1.8rem;background:var(--navy);color:white;font-size:11px;letter-spacing:2px;text-transform:uppercase;cursor:pointer;transition:all .2s;border:none;font-family:'DM Sans',sans-serif;font-weight:500}
+.btn-dark:hover{background:var(--navy2)}
+.btn-outline{display:inline-flex;align-items:center;gap:8px;padding:.7rem 1.8rem;background:transparent;color:var(--navy);font-size:11px;letter-spacing:2px;text-transform:uppercase;cursor:pointer;transition:all .2s;border:1px solid var(--border2);font-family:'DM Sans',sans-serif;font-weight:500}
+.btn-outline:hover{border-color:var(--navy)}
+.hero-stats{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(255,255,255,.1)}
+.hstat{background:rgba(255,255,255,.05);padding:1.5rem;border:1px solid rgba(255,255,255,.08)}
+.hstat-val{font-family:'Instrument Serif',serif;font-size:36px;color:white;line-height:1;margin-bottom:.3rem}
+.hstat-lbl{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.45)}
+.hero-tagline{font-family:'Instrument Serif',serif;font-size:22px;color:white;line-height:1.5;margin-bottom:2.5rem;opacity:.9;font-style:italic}
+.sec{padding:5rem 3rem}
+.sec-inner{max-width:1100px;margin:0 auto}
+.sec-label{font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--muted);margin-bottom:.4rem;font-weight:500}
+.sec-title{font-family:'Instrument Serif',serif;font-size:clamp(32px,4vw,52px);color:var(--navy);line-height:1.1;margin-bottom:.8rem}
+.sec-title em{font-style:italic;color:var(--muted)}
+.divider{width:36px;height:2px;background:var(--navy);margin:.8rem 0 3rem}
+.about-2col{display:grid;grid-template-columns:1.1fr .9fr;gap:5rem;align-items:start}
+.about-quote{font-family:'Instrument Serif',serif;font-size:20px;color:var(--navy);line-height:1.65;margin-bottom:2rem;padding-left:1.2rem;border-left:3px solid var(--navy);font-style:italic}
+.about-body{font-size:14px;color:var(--muted);line-height:2;margin-bottom:1.2rem}
+.info-table{width:100%;border-collapse:collapse}
+.info-table tr{border-bottom:1px solid var(--border)}
+.info-table td{padding:.75rem 0;font-size:13px}
+.info-table td:first-child{color:var(--light);letter-spacing:1px;text-transform:uppercase;font-size:10px;font-weight:500;width:40%}
+.info-table td:last-child{color:var(--text);text-align:right}
+.lang-row{display:flex;align-items:center;justify-content:space-between;padding:.8rem 0;border-bottom:1px solid var(--border)}
+.lang-badge{font-size:10px;letter-spacing:1.5px;font-weight:600;text-transform:uppercase;padding:.2rem .6rem;background:var(--navy);color:white}
+.exp-item{display:grid;grid-template-columns:160px 1fr;gap:3rem;padding:2.5rem 0;border-bottom:1px solid var(--border)}
+.exp-item:first-child{border-top:1px solid var(--border)}
+.exp-yr{font-size:11px;color:var(--light);letter-spacing:1px;padding-top:4px;line-height:1.6}
+.exp-co{font-family:'Instrument Serif',serif;font-size:22px;color:var(--navy);margin-bottom:.1rem}
+.exp-role{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:.8rem;font-weight:500}
+.exp-desc{font-size:13.5px;color:var(--muted);line-height:1.9;max-width:560px}
+.exp-tags{display:flex;gap:.4rem;flex-wrap:wrap;margin-top:.9rem}
+.etag{font-size:10px;padding:.25rem .65rem;border:1px solid var(--border2);color:var(--muted);letter-spacing:.5px}
+.clients-sec{background:var(--navy);padding:4rem 3rem}
+.clients-label{font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.4);text-align:center;margin-bottom:3rem;font-weight:500}
+.logos-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:2rem 3rem;align-items:center;justify-items:center;max-width:900px;margin:0 auto}
+.logo-item{display:flex;align-items:center;justify-content:center;opacity:.55;transition:opacity .2s;cursor:default}
+.logo-item:hover{opacity:.85}
+.logo-text{font-size:12px;letter-spacing:2.5px;text-transform:uppercase;color:white;font-weight:600;white-space:nowrap;font-family:'DM Sans',sans-serif}
+.proj-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem;margin-top:3rem}
+.proj-card{background:var(--white);border:1px solid var(--border);padding:2rem;transition:border-color .2s,box-shadow .2s}
+.proj-card:hover{border-color:var(--border2);box-shadow:0 4px 20px rgba(0,0,0,.06)}
+.proj-cat{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:.6rem;font-weight:500}
+.proj-name{font-family:'Instrument Serif',serif;font-size:18px;color:var(--navy);margin-bottom:.6rem}
+.proj-body{font-size:13px;color:var(--muted);line-height:1.85}
+.skills-4col{display:grid;grid-template-columns:1fr 1fr;gap:3rem}
+.skill-grp-title{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--navy);margin-bottom:1.2rem;font-weight:600}
+.skill-row{display:flex;align-items:center;justify-content:space-between;padding:.55rem 0;border-bottom:1px solid var(--border);gap:1rem}
+.skill-name{font-size:13.5px;color:var(--text)}
+.skill-bar{width:80px;height:2px;background:var(--border);position:relative;flex-shrink:0}
+.skill-fill{height:2px;background:var(--navy);position:absolute;left:0;top:0}
+.cert-card{background:var(--white);border:1px solid var(--border);padding:1.5rem 2rem;display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;margin-bottom:1rem;transition:border-color .2s}
+.cert-card:hover{border-color:var(--border2)}
+.cert-name{font-size:15px;font-weight:500;color:var(--navy);margin-bottom:.2rem}
+.cert-sub{font-size:12px;color:var(--muted)}
+.cert-yr{font-family:'Instrument Serif',serif;font-size:22px;color:var(--light);flex-shrink:0}
+.contact-2col{display:grid;grid-template-columns:1fr 1fr;gap:5rem}
+.cf-row{padding:.9rem 0;border-bottom:1px solid var(--border)}
+.cf-lbl{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--light);margin-bottom:.3rem;font-weight:500}
+.cf-val{font-size:14px;color:var(--text)}
+.cf-val a{color:var(--navy);text-decoration:none}
+.cf-val a:hover{text-decoration:underline}
+.contact-form{display:flex;flex-direction:column;gap:1.2rem}
+.contact-form input,.contact-form textarea{background:var(--white);border:1px solid var(--border);padding:.8rem 1rem;color:var(--text);font-family:'DM Sans',sans-serif;font-size:13px;outline:none;transition:border-color .2s;resize:none;width:100%}
+.contact-form input:focus,.contact-form textarea:focus{border-color:var(--navy)}
+.contact-form input::placeholder,.contact-form textarea::placeholder{color:var(--light);font-size:12px}
+.contact-btn{padding:.85rem;background:var(--navy);border:none;color:white;font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:2.5px;text-transform:uppercase;cursor:pointer;font-weight:500;transition:background .2s;width:100%}
+.contact-btn:hover{background:var(--navy2)}
+footer{background:var(--navy);padding:2rem 3rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.foot-logo{font-family:'Instrument Serif',serif;font-size:16px;color:rgba(255,255,255,.5);letter-spacing:.3px}
+.foot-note{font-size:11px;color:rgba(255,255,255,.35);letter-spacing:1px}
+@media(max-width:768px){
+  nav{padding:1rem 1.5rem}
+  .nav-links{display:none;position:fixed;top:62px;left:0;right:0;background:var(--bg);flex-direction:column;padding:1.5rem 2rem;gap:1.5rem;border-bottom:1px solid var(--border);z-index:99}
+  .nav-links.open{display:flex}
+  .nav-hamburger{display:flex}
+  .hero{grid-template-columns:1fr;min-height:auto}
+  .hero-left{padding:3rem 1.5rem}
+  .hero-right{min-height:300px;padding:2rem 1.5rem}
+  .hero-stats{grid-template-columns:1fr 1fr}
+  .sec{padding:3rem 1.5rem}
+  .about-2col,.skills-4col,.contact-2col{grid-template-columns:1fr}
+  .exp-item{grid-template-columns:1fr;gap:.5rem}
+  .proj-grid{grid-template-columns:1fr}
+  .logos-grid{grid-template-columns:repeat(3,1fr);gap:1.5rem 2rem}
+  footer{padding:1.5rem}
+}
+</style>
+</head>
+<body>
 
-OPEN TO OPPORTUNITIES — DÜSSELDORF
-SENIOR ACCOUNT & BD MANAGER · TRILINGUAL
-Ashley Xinyi Lin
-APAC–EUROPE · PARTNER SUCCESS · BUSINESS DEVELOPMENT
-I help global APAC brands grow in European markets — managing the full commercial cycle from market entry strategy to long-term partner success. Native Mandarin speaker, fluent in German and English, based in Düsseldorf.
-VIEW EXPERIENCE → GET IN TOUCH
-"Driven by curiosity,
-resilience, and a passion
-for solving interesting
-business challenges."
-3yr
-APAC CLIENT MGMT
-10+
-EUROPEAN MARKETS
-25+
-APAC CLIENTS
-3
-LANGUAGES
-Ashley Xinyi Lin
-Düsseldorf · Germany · 2026
+<nav>
+  <div class="nav-logo" onclick="showPage('home')">Ashley Xinyi Lin <span>·</span></div>
+  <div class="nav-links" id="navLinks">
+    <a class="active" onclick="nav('home',this)">Home</a>
+    <a onclick="nav('about',this)">About</a>
+    <a onclick="nav('experience',this)">Experience</a>
+    <a onclick="nav('skills',this)">Skills</a>
+    <a onclick="nav('contact',this)">Contact</a>
+  </div>
+  <div class="nav-hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<div class="page active" id="home">
+  <div class="hero">
+    <div class="hero-left">
+      <div class="avail"><span></span> Open to opportunities — Düsseldorf</div>
+      <div class="hero-label">Senior Account & BD Manager · Trilingual</div>
+      <h1 class="hero-name">Ashley<br><em>Xinyi Lin</em></h1>
+      <div class="hero-role">APAC–Europe · Partner Success · Business Development</div>
+      <p class="hero-desc">I help global APAC brands grow in European markets — managing the full commercial cycle from market entry strategy to long-term partner success. Native Mandarin speaker, fluent in German and English, based in Düsseldorf.</p>
+      <div class="hero-ctas">
+        <button class="btn-dark" onclick="nav('experience',document.querySelectorAll('.nav-links a')[2])">View Experience →</button>
+        <button class="btn-outline" onclick="nav('contact',document.querySelectorAll('.nav-links a')[4])">Get In Touch</button>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-right-bg"></div>
+      <div class="hero-tagline">"Driven by curiosity,<br>resilience, and a passion<br>for solving interesting<br>business challenges."</div>
+      <div class="hero-stats">
+        <div class="hstat"><div class="hstat-val">3yr</div><div class="hstat-lbl">APAC Client Mgmt</div></div>
+        <div class="hstat"><div class="hstat-val">10+</div><div class="hstat-lbl">European Markets</div></div>
+        <div class="hstat"><div class="hstat-val">25+</div><div class="hstat-lbl">APAC Clients</div></div>
+        <div class="hstat"><div class="hstat-val">3</div><div class="hstat-lbl">Languages</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="page" id="about">
+  <div class="sec">
+    <div class="sec-inner">
+      <div class="sec-label">About Me</div>
+      <h2 class="sec-title">Cross-Border<br><em>Growth Architect</em></h2>
+      <div class="divider"></div>
+      <div class="about-2col">
+        <div>
+          <p class="about-quote">"Driven by curiosity, resilience, and a passion for solving interesting business challenges, I help companies navigate cultures, build partnerships, and uncover growth opportunities across borders."</p>
+          <p class="about-body">Based in Düsseldorf for five years, I am a Senior Project & Account Manager at KleinS GmbH, a full-service market entry agency helping APAC brands establish and grow in Europe. My client portfolio spans EcoFlow, OPPO, Anker, XGIMI, JD.com, Alibaba, Xpeng, Geek+, Aiko, AgiBot, MOVA, and more — across Germany, France, Benelux, the Nordics, and Eastern Europe.</p>
+          <p class="about-body">My work covers the full commercial cycle: identifying opportunities, qualifying prospects, negotiating and closing, executing on the ground, and building the long-term relationships that generate the next engagement. I have led brand launches, dealer conferences, retail activations, and trade show presences across more than 10 European markets.</p>
+          <p class="about-body">What makes me effective in APAC-facing roles is cultural fluency, not just language fluency — I turn the gap between APAC headquarters priorities and European commercial expectations into a coordination advantage both sides rely on. Having worked across countries, industries, and teams, I've learned that the best results come from trust, adaptability, and strong collaboration. I stay curious, keep asking questions, and take pride in being the kind of teammate others can count on.</p>
+        </div>
+        <div>
+          <div style="margin-bottom:2.5rem">
+            <div class="sec-label" style="margin-bottom:1rem">Personal Details</div>
+            <table class="info-table">
+              <tr><td>Location</td><td>Düsseldorf, Germany</td></tr>
+              <tr><td>Email</td><td>xinyi.lin.de@gmail.com</td></tr>
+              <tr><td>Phone</td><td>+49 160 9563 9554</td></tr>
+              <tr><td>LinkedIn</td><td>ashley-xinyi-lin</td></tr>
+              <tr><td>Visa</td><td>§18b Germany (no sponsorship needed)</td></tr>
+            </table>
+          </div>
+          <div style="margin-bottom:2.5rem">
+            <div class="sec-label" style="margin-bottom:1rem">Languages</div>
+            <div class="lang-row"><span style="font-size:14px">Mandarin Chinese</span><span class="lang-badge">Native</span></div>
+            <div class="lang-row"><span style="font-size:14px">German</span><span class="lang-badge">C1</span></div>
+            <div class="lang-row"><span style="font-size:14px">English</span><span class="lang-badge">C1</span></div>
+          </div>
+          <div>
+            <div class="sec-label" style="margin-bottom:1rem">Education</div>
+            <table class="info-table">
+              <tr><td>Doctoral Studies</td><td>Freie Universität Berlin</td></tr>
+              <tr><td>Master's</td><td>International Political Economy</td></tr>
+              <tr><td>Bachelor's</td><td>International Political Economy</td></tr>
+              <tr><td>Certification</td><td>Google Data Analytics Certificate</td></tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top:4rem;padding-top:3rem;border-top:1px solid var(--border)">
+        <div class="sec-label" style="margin-bottom:.4rem">Beyond Work</div>
+        <h3 style="font-family:'Instrument Serif',serif;font-size:28px;color:var(--navy);margin-bottom:.8rem">Life Outside the Office</h3>
+        <div style="width:36px;height:2px;background:var(--navy);margin-bottom:2rem"></div>
+        <p style="font-size:15px;color:var(--muted);line-height:2;max-width:680px">I love sport and travel — through movement I explore the relationship between my mind and body, and through travel I connect with the vast, endlessly fascinating world beyond my doorstep. Rock climbing, swimming, Hyrox, fitness, Bachata, and wherever the next flight takes me.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="page" id="experience">
+  <div class="sec">
+    <div class="sec-inner">
+      <div class="sec-label">Career</div>
+      <h2 class="sec-title">Experience &<br><em>Projects</em></h2>
+      <div class="divider"></div>
+      <div class="exp-item">
+        <div class="exp-yr">2022 —<br>Present</div>
+        <div>
+          <div class="exp-co">KleinS GmbH</div>
+          <div class="exp-role">Senior Project & Account Manager · Düsseldorf</div>
+          <div class="exp-desc">Full commercial cycle management for 25+ APAC brands entering European markets. Client portfolio includes EcoFlow, OPPO, Anker, XGIMI, JD.com, Alibaba, Geek+, Xpeng, Aiko, AgiBot, MOVA, and more — across 10+ markets including Germany, France, Benelux, Eastern Europe, and the Nordics.<br><br>Led EcoFlow's shop-in-shop programme at MediaMarkt Tech Village: build specifications, retail compliance negotiation, POSM sourcing and adaptation, and 8 months of ongoing promotional operations and in-store consumer activation events.<br><br>Directed major brand events: AIKO's European dealer conference at Intersolar Munich, AgiBot's first European product launch, MOVA debut launches in Northern and Eastern Europe, Xpeng pop-up activations across three Eastern European markets. Exhibition management at Genera Spain, Rimini Key Energy, Frankfurt IMEX, and Paris Motor Show.</div>
+          <div class="exp-tags">
+            <span class="etag">APAC–Europe BD</span>
+            <span class="etag">Account Management</span>
+            <span class="etag">Retail Activation</span>
+            <span class="etag">Trade Shows</span>
+            <span class="etag">Channel Development</span>
+            <span class="etag">Partner Relations</span>
+          </div>
+        </div>
+      </div>
+      <div class="exp-item">
+        <div class="exp-yr">2021 —<br>Present</div>
+        <div>
+          <div class="exp-co">Independent Entrepreneur</div>
+          <div class="exp-role">Founder · B2B Cross-Border Trade</div>
+          <div class="exp-desc">Exploring a B2B trade business bridging manufacturers with import markets in Africa and beyond. Demand-first approach: researching market needs, building supplier relationships, and validating product categories through direct conversations with importers and distributors.</div>
+          <div class="exp-tags">
+            <span class="etag">Entrepreneurship</span>
+            <span class="etag">Trade Strategy</span>
+            <span class="etag">Market Validation</span>
+            <span class="etag">APAC Supply Chain</span>
+          </div>
+        </div>
+      </div>
+      <div class="exp-item">
+        <div class="exp-yr">Earlier</div>
+        <div>
+          <div class="exp-co">DAAD</div>
+          <div class="exp-role">Research Associate</div>
+          <div class="exp-desc">Research role at the German Academic Exchange Service (DAAD), contributing to academic and policy-oriented research projects. Developed skills in structured analysis, report writing, and working within institutional frameworks.</div>
+          <div class="exp-tags">
+            <span class="etag">Research</span>
+            <span class="etag">Academic Analysis</span>
+            <span class="etag">Policy</span>
+            <span class="etag">Institutional Relations</span>
+          </div>
+        </div>
+      </div>
+      <div class="proj-grid">
+        <div class="proj-card">
+          <div class="proj-cat">EcoFlow · Retail Media</div>
+          <div class="proj-name">MediaMarkt Shop-in-Shop Programme</div>
+          <div class="proj-body">End-to-end retail programme: build specs, POSM adaptation, retail compliance negotiation, and 8 months of promotional operations and in-store consumer activation events at MediaMarkt Tech Village.</div>
+        </div>
+        <div class="proj-card">
+          <div class="proj-cat">AIKO · Events</div>
+          <div class="proj-name">European Dealer Conference — Intersolar Munich</div>
+          <div class="proj-body">Full organisation of AIKO's European dealer conference at Intersolar Munich. Venue, programme, partner coordination, and on-site brand execution.</div>
+        </div>
+        <div class="proj-card">
+          <div class="proj-cat">AgiBot · Launch</div>
+          <div class="proj-name">First European Product Launch</div>
+          <div class="proj-body">Managed AgiBot's inaugural European market entry — positioning, press coordination, partner outreach, and live product demonstration logistics from scratch.</div>
+        </div>
+        <div class="proj-card">
+          <div class="proj-cat">Xpeng · Multi-Market</div>
+          <div class="proj-name">Pop-Up Activations — 3 Eastern European Markets</div>
+          <div class="proj-body">Simultaneous EV pop-up activations across three markets — multi-market logistics, local partner briefing, and brand standards execution in parallel.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="clients-sec">
+    <div class="clients-label">Clients I've worked with</div>
+    <div class="logos-grid">
+      <div class="logo-item"><span class="logo-text">ECOFLOW</span></div>
+      <div class="logo-item"><span class="logo-text">OPPO</span></div>
+      <div class="logo-item"><span class="logo-text">ALIBABA</span></div>
+      <div class="logo-item"><span class="logo-text">ANKER</span></div>
+      <div class="logo-item"><span class="logo-text">AIKO</span></div>
+      <div class="logo-item"><span class="logo-text">XGIMI</span></div>
+      <div class="logo-item"><span class="logo-text">GEEK+</span></div>
+      <div class="logo-item"><span class="logo-text">XPENG</span></div>
+      <div class="logo-item"><span class="logo-text">MOVA</span></div>
+      <div class="logo-item"><span class="logo-text">JD.COM</span></div>
+      <div class="logo-item"><span class="logo-text">DREAME</span></div>
+      <div class="logo-item"><span class="logo-text">MINISO</span></div>
+      <div class="logo-item"><span class="logo-text">MINTH</span></div>
+      <div class="logo-item"><span class="logo-text">AGIBOT</span></div>
+      <div class="logo-item"><span class="logo-text">LONGI</span></div>
+      <div class="logo-item"><span class="logo-text">BIOSTIME</span></div>
+      <div class="logo-item"><span class="logo-text">CHINA MOBILE</span></div>
+      <div class="logo-item"><span class="logo-text">BROWN-FORMAN</span></div>
+      <div class="logo-item"><span class="logo-text">HANSHOW</span></div>
+      <div class="logo-item"><span class="logo-text">NOTHING</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="page" id="skills">
+  <div class="sec">
+    <div class="sec-inner">
+      <div class="sec-label">Competencies</div>
+      <h2 class="sec-title">Skills &<br><em>Expertise</em></h2>
+      <div class="divider"></div>
+      <div class="skills-4col">
+        <div>
+          <div class="skill-grp-title">Partner & Account Management</div>
+          <div class="skill-row"><span class="skill-name">APAC Partner Relationships</span><div class="skill-bar"><div class="skill-fill" style="width:95%"></div></div></div>
+          <div class="skill-row"><span class="skill-name">Account Management (B2B)</span><div class="skill-bar"><div class="skill-fill" style="width:95%"></div></div></div>
+          <div class="skill-row"><span class="skill-name">Client Success & Retention</span><div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div></div>
+          <div class="skill-row"><span class="skill-name">Program Design & Delivery</span><div class="skill-bar"><div class="skill-fill" style="width:88%"></div></div></div>
+          <div class="skill-row"><span class="skill-name">Stakeholder Communication</span><div class="skill-bar"><div class="skill-fill" style="width:92%"></div></div></div>
+          <div class="skill-row"><span class="skill-name">CRM / Pipeline Management</span><div class="skill-bar"><div class="skill-fill" style="width:80%"></div></div></div>
+        </div>
+        <div>
+          <div class="skill-grp-title">Data & Digital Commerce</div>
+          <div class="skill-row"><span class="skill-name">E-Commerce Analytics</span><div class="skill-bar"><div class="skill-fill" style="width:80%"></div></div></div>
+          <div class="skill-row"><span class="skill-name">SQL (querying & reporting)</span><div class="skill-bar"><div class="skill-fill" style="width:72%"></div></div></div>
+          <div class="skill-row"><span class="skill-name">Google Analytics / GA4</span><div class="skill-bar"><div class="skill-fill" style="width:75%"></div></div></div>
+          <div class="skill-row"><span class="skill-name">Data Visualisation</span><div class="skill-bar"><div class="skill-fill" style="width:78%"></div></div></div>
+          <div class="skill-row"><span class="skill-name">Retail Media & Sponsored Listings</span><div class="skill-bar"><div class="skill-fill" style="width:70%"></div></div></div>
+          <div class="skill-row"><span class="skill-name">Excel / Google Sheets</span><div class="skill-bar"><div class="skill-fill" style="width:88%"></div></div></div>
+        </div>
+        <div>
+          <div class="skill-grp-title">Commercial & Business Development</div>
+          <div class="skill-row"><span class="skill-name">Market Entry Strategy</span><div class="skill-bar"><div class="skill-fill" style="width:92%"></div></div></div>
+          <div class="skill-row"><span class="skill-name">Channel Development</span><div class="skill-bar"><div class="skill-fill" style="width:88%"></div></div></div>
+          <div class="skill-row"><span class="skill-name">Contract Negotiation</span><div class="skill-bar"><div class="skill-fill" style="width:82%"></div></div></div>
+          <div class="skill-row"><span class="skill-name">Revenue Growth</span><div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div></div>
+          <div class="skill-row"><span class="skill-name">Brand Activation & Events</span><div class="skill-bar"><div class="skill-fill" style="width:93%"></div></div></div>
+        </div>
+        <div>
+          <div class="skill-grp-title">Communication & Tools</div>
+          <div class="skill-row"><span class="skill-name">Mandarin Chinese (Native)</span><div class="skill-bar"><div class="skill-fill" style="width:100%"></div></div></div>
+          <div class="skill-row"><span class="skill-name">German (C1)</span><div class="skill-bar"><div class="skill-fill" style="width:88%"></div></div></div>
+          <div class="skill-row"><span class="skill-name">English (C1)</span><div class="skill-bar"><div class="skill-fill" style="width:88%"></div></div></div>
+          <div class="skill-row"><span class="skill-name">Monday.com</span><div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div></div>
+          <div class="skill-row"><span class="skill-name">Feishu / Lark</span><div class="skill-bar"><div class="skill-fill" style="width:92%"></div></div></div>
+        </div>
+      </div>
+      <div style="margin-top:4rem">
+        <div class="sec-label" style="margin-bottom:1.5rem">Education & Certifications</div>
+        <div class="cert-card">
+          <div>
+            <div class="cert-name">Doctoral Studies — Freie Universität Berlin</div>
+            <div class="cert-sub">PhD-level research in political economy — rigorous analytical and research frameworks</div>
+          </div>
+          <div class="cert-yr">FU</div>
+        </div>
+        <div class="cert-card">
+          <div>
+            <div class="cert-name">Master's — International Political Economy</div>
+            <div class="cert-sub">Postgraduate degree in international political economy, trade, and global markets</div>
+          </div>
+          <div class="cert-yr">MA</div>
+        </div>
+        <div class="cert-card">
+          <div>
+            <div class="cert-name">Bachelor's — International Political Economy</div>
+            <div class="cert-sub">Undergraduate degree including data analytics, market research, and business statistics</div>
+          </div>
+          <div class="cert-yr">BA</div>
+        </div>
+        <div class="cert-card">
+          <div>
+            <div class="cert-name">Google Data Analytics Professional Certificate</div>
+            <div class="cert-sub">Google / Coursera — SQL, R, data visualisation, dashboards, and analysis workflows</div>
+          </div>
+          <div class="cert-yr">2024</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="page" id="contact">
+  <div class="sec">
+    <div class="sec-inner">
+      <div class="sec-label">Get In Touch</div>
+      <h2 class="sec-title">Let's<br><em>Talk.</em></h2>
+      <div class="divider"></div>
+      <div class="contact-2col">
+        <div>
+          <p style="font-size:14px;color:var(--muted);line-height:1.9;margin-bottom:2.5rem;max-width:360px">Open to roles in partner success, APAC business development, and account management. Düsseldorf-based, no visa sponsorship required.</p>
+          <div class="cf-row"><div class="cf-lbl">Email</div><div class="cf-val"><a href="mailto:xinyi.lin.de@gmail.com">xinyi.lin.de@gmail.com</a></div></div>
+          <div class="cf-row"><div class="cf-lbl">Phone</div><div class="cf-val">+49 160 9563 9554</div></div>
+          <div class="cf-row"><div class="cf-lbl">LinkedIn</div><div class="cf-val"><a href="https://linkedin.com/in/ashley-xinyi-lin" target="_blank">linkedin.com/in/ashley-xinyi-lin</a></div></div>
+          <div class="cf-row"><div class="cf-lbl">Location</div><div class="cf-val">Düsseldorf, Germany</div></div>
+          <div class="cf-row"><div class="cf-lbl">Languages</div><div class="cf-val">Mandarin (Native) · German C1 · English C1</div></div>
+          <div class="cf-row"><div class="cf-lbl">Availability</div><div class="cf-val">Open to new opportunities</div></div>
+        </div>
+        <div class="contact-form">
+          <input type="text" placeholder="Your name">
+          <input type="email" placeholder="Email address">
+          <input type="text" placeholder="Company">
+          <textarea rows="5" placeholder="Your message"></textarea>
+          <button class="contact-btn">Send Message</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="foot-logo">Ashley Xinyi Lin</div>
+  <div class="foot-note">Düsseldorf · Germany · 2026</div>
+</footer>
+
+<script>
+function showPage(id){nav(id,null)}
+function nav(id,el){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  document.querySelectorAll('.nav-links a').forEach(a=>a.classList.remove('active'));
+  if(el){el.classList.add('active')}else{
+    const m={home:0,about:1,experience:2,skills:3,contact:4};
+    const links=document.querySelectorAll('.nav-links a');
+    if(m[id]!==undefined)links[m[id]].classList.add('active');
+  }
+  document.getElementById('navLinks').classList.remove('open');
+  window.scrollTo(0,0);
+}
+function toggleMenu(){
+  document.getElementById('navLinks').classList.toggle('open');
+}
+</script>
+</body>
+</html>
