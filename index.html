@@ -24,6 +24,8 @@
   --white:#f0f5f0;
 }
 body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);font-size:15px;line-height:1.7;overflow-x:hidden}
+
+/* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1rem 3rem;border-bottom:1px solid var(--border);background:rgba(237,242,237,0.97);backdrop-filter:blur(12px)}
 .nav-logo{font-family:'Instrument Serif',serif;font-size:18px;color:var(--navy);cursor:pointer;letter-spacing:.3px}
 .nav-logo span{color:var(--light)}
@@ -32,9 +34,13 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .nav-links a:hover,.nav-links a.active{color:var(--navy)}
 .nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
 .nav-hamburger span{display:block;width:22px;height:1.5px;background:var(--navy);transition:all .3s}
+
+/* PAGES */
 .page{display:none;padding-top:62px;animation:up .3s ease}
 .page.active{display:block}
 @keyframes up{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+
+/* HERO */
 .hero{min-height:calc(100vh - 62px);display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:0;padding:0}
 .hero-left{padding:5rem 3rem 5rem 3rem;display:flex;flex-direction:column;justify-content:center}
 .hero-right{background:#2e3d2e;min-height:calc(100vh - 62px);display:flex;flex-direction:column;justify-content:flex-end;padding:3rem;position:relative;overflow:hidden}
@@ -57,12 +63,16 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .hstat-val{font-family:'Instrument Serif',serif;font-size:36px;color:white;line-height:1;margin-bottom:.3rem}
 .hstat-lbl{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.45)}
 .hero-tagline{font-family:'Instrument Serif',serif;font-size:22px;color:white;line-height:1.5;margin-bottom:2.5rem;opacity:.9;font-style:italic}
+
+/* SECTIONS */
 .sec{padding:5rem 3rem}
 .sec-inner{max-width:1100px;margin:0 auto}
 .sec-label{font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--muted);margin-bottom:.4rem;font-weight:500}
 .sec-title{font-family:'Instrument Serif',serif;font-size:clamp(32px,4vw,52px);color:var(--navy);line-height:1.1;margin-bottom:.8rem}
 .sec-title em{font-style:italic;color:var(--muted)}
 .divider{width:36px;height:2px;background:var(--navy);margin:.8rem 0 3rem}
+
+/* ABOUT */
 .about-2col{display:grid;grid-template-columns:1.1fr .9fr;gap:5rem;align-items:start}
 .about-quote{font-family:'Instrument Serif',serif;font-size:20px;color:var(--navy);line-height:1.65;margin-bottom:2rem;padding-left:1.2rem;border-left:3px solid var(--navy);font-style:italic}
 .about-body{font-size:14px;color:var(--muted);line-height:2;margin-bottom:1.2rem}
@@ -73,6 +83,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .info-table td:last-child{color:var(--text);text-align:right}
 .lang-row{display:flex;align-items:center;justify-content:space-between;padding:.8rem 0;border-bottom:1px solid var(--border)}
 .lang-badge{font-size:10px;letter-spacing:1.5px;font-weight:600;text-transform:uppercase;padding:.2rem .6rem;background:var(--navy);color:white}
+
+/* EXPERIENCE */
 .exp-item{display:grid;grid-template-columns:160px 1fr;gap:3rem;padding:2.5rem 0;border-bottom:1px solid var(--border)}
 .exp-item:first-child{border-top:1px solid var(--border)}
 .exp-yr{font-size:11px;color:var(--light);letter-spacing:1px;padding-top:4px;line-height:1.6}
@@ -81,29 +93,39 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .exp-desc{font-size:13.5px;color:var(--muted);line-height:1.9;max-width:560px}
 .exp-tags{display:flex;gap:.4rem;flex-wrap:wrap;margin-top:.9rem}
 .etag{font-size:10px;padding:.25rem .65rem;border:1px solid var(--border2);color:var(--muted);letter-spacing:.5px}
+
+/* CLIENT LOGOS SECTION */
 .clients-sec{background:var(--navy);padding:4rem 3rem}
 .clients-label{font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.4);text-align:center;margin-bottom:3rem;font-weight:500}
 .logos-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:2rem 3rem;align-items:center;justify-items:center;max-width:900px;margin:0 auto}
 .logo-item{display:flex;align-items:center;justify-content:center;opacity:.55;transition:opacity .2s;cursor:default}
 .logo-item:hover{opacity:.85}
 .logo-text{font-size:12px;letter-spacing:2.5px;text-transform:uppercase;color:white;font-weight:600;white-space:nowrap;font-family:'DM Sans',sans-serif}
+
+/* PROJECT CARDS */
 .proj-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem;margin-top:3rem}
 .proj-card{background:var(--white);border:1px solid var(--border);padding:2rem;transition:border-color .2s,box-shadow .2s}
 .proj-card:hover{border-color:var(--border2);box-shadow:0 4px 20px rgba(0,0,0,.06)}
 .proj-cat{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:.6rem;font-weight:500}
 .proj-name{font-family:'Instrument Serif',serif;font-size:18px;color:var(--navy);margin-bottom:.6rem}
 .proj-body{font-size:13px;color:var(--muted);line-height:1.85}
+
+/* SKILLS */
 .skills-4col{display:grid;grid-template-columns:1fr 1fr;gap:3rem}
 .skill-grp-title{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--navy);margin-bottom:1.2rem;font-weight:600}
 .skill-row{display:flex;align-items:center;justify-content:space-between;padding:.55rem 0;border-bottom:1px solid var(--border);gap:1rem}
 .skill-name{font-size:13.5px;color:var(--text)}
 .skill-bar{width:80px;height:2px;background:var(--border);position:relative;flex-shrink:0}
 .skill-fill{height:2px;background:var(--navy);position:absolute;left:0;top:0}
+
+/* CERTS */
 .cert-card{background:var(--white);border:1px solid var(--border);padding:1.5rem 2rem;display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;margin-bottom:1rem;transition:border-color .2s}
 .cert-card:hover{border-color:var(--border2)}
 .cert-name{font-size:15px;font-weight:500;color:var(--navy);margin-bottom:.2rem}
 .cert-sub{font-size:12px;color:var(--muted)}
 .cert-yr{font-family:'Instrument Serif',serif;font-size:22px;color:var(--light);flex-shrink:0}
+
+/* CONTACT */
 .contact-2col{display:grid;grid-template-columns:1fr 1fr;gap:5rem}
 .cf-row{padding:.9rem 0;border-bottom:1px solid var(--border)}
 .cf-lbl{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--light);margin-bottom:.3rem;font-weight:500}
@@ -116,9 +138,13 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .contact-form input::placeholder,.contact-form textarea::placeholder{color:var(--light);font-size:12px}
 .contact-btn{padding:.85rem;background:var(--navy);border:none;color:white;font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:2.5px;text-transform:uppercase;cursor:pointer;font-weight:500;transition:background .2s;width:100%}
 .contact-btn:hover{background:var(--navy2)}
+
+/* FOOTER */
 footer{background:var(--navy);padding:2rem 3rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
 .foot-logo{font-family:'Instrument Serif',serif;font-size:16px;color:rgba(255,255,255,.5);letter-spacing:.3px}
 .foot-note{font-size:11px;color:rgba(255,255,255,.35);letter-spacing:1px}
+
+/* MOBILE */
 @media(max-width:768px){
   nav{padding:1rem 1.5rem}
   .nav-links{display:none;position:fixed;top:62px;left:0;right:0;background:var(--bg);flex-direction:column;padding:1.5rem 2rem;gap:1.5rem;border-bottom:1px solid var(--border);z-index:99}
@@ -153,6 +179,7 @@ footer{background:var(--navy);padding:2rem 3rem;display:flex;align-items:center;
   </div>
 </nav>
 
+<!-- ── HOME ── -->
 <div class="page active" id="home">
   <div class="hero">
     <div class="hero-left">
@@ -179,6 +206,7 @@ footer{background:var(--navy);padding:2rem 3rem;display:flex;align-items:center;
   </div>
 </div>
 
+<!-- ── ABOUT ── -->
 <div class="page" id="about">
   <div class="sec">
     <div class="sec-inner">
@@ -188,7 +216,7 @@ footer{background:var(--navy);padding:2rem 3rem;display:flex;align-items:center;
       <div class="about-2col">
         <div>
           <p class="about-quote">"Driven by curiosity, resilience, and a passion for solving interesting business challenges, I help companies navigate cultures, build partnerships, and uncover growth opportunities across borders."</p>
-          <p class="about-body">Based in Düsseldorf for five years, I am a Senior Project & Account Manager at KleinS GmbH, a full-service market entry agency helping APAC brands establish and grow in Europe. My client portfolio spans EcoFlow, OPPO, Anker, XGIMI, JD.com, Alibaba, Xpeng, Geek+, Aiko, AgiBot, MOVA, and more — across Germany, France, Benelux, the Nordics, and Eastern Europe.</p>
+          <p class="about-body">Based in Düsseldorf for five years, I am a Senior Project & Account Manager at KleinS GmbH, a full-service market entry agency helping APAC brands establish and grow in Europe. My client portfolio spans EcoFlow, OPPO, Jackery, Anker, XGIMI, JD.com, Alibaba, Xpeng, Geek+, Aiko, AgiBot, MOVA, DJI, Huawei, OnePlus, and more — across Germany, France, Benelux, the Nordics, and Eastern Europe.</p>
           <p class="about-body">My work covers the full commercial cycle: identifying opportunities, qualifying prospects, negotiating and closing, executing on the ground, and building the long-term relationships that generate the next engagement. I have led brand launches, dealer conferences, retail activations, and trade show presences across more than 10 European markets.</p>
           <p class="about-body">What makes me effective in APAC-facing roles is cultural fluency, not just language fluency — I turn the gap between APAC headquarters priorities and European commercial expectations into a coordination advantage both sides rely on. Having worked across countries, industries, and teams, I've learned that the best results come from trust, adaptability, and strong collaboration. I stay curious, keep asking questions, and take pride in being the kind of teammate others can count on.</p>
         </div>
@@ -212,8 +240,8 @@ footer{background:var(--navy);padding:2rem 3rem;display:flex;align-items:center;
           <div>
             <div class="sec-label" style="margin-bottom:1rem">Education</div>
             <table class="info-table">
-              <tr><td>Doctoral Studies</td><td>Freie Universität Berlin</td></tr>
               <tr><td>Master's</td><td>International Political Economy</td></tr>
+              <tr><td>Doctoral Studies</td><td>Freie Universität Berlin</td></tr>
               <tr><td>Bachelor's</td><td>International Political Economy</td></tr>
               <tr><td>Certification</td><td>Google Data Analytics Certificate</td></tr>
             </table>
@@ -229,19 +257,21 @@ footer{background:var(--navy);padding:2rem 3rem;display:flex;align-items:center;
     </div>
   </div>
 </div>
-
 <div class="page" id="experience">
   <div class="sec">
     <div class="sec-inner">
       <div class="sec-label">Career</div>
       <h2 class="sec-title">Experience &<br><em>Projects</em></h2>
       <div class="divider"></div>
+
       <div class="exp-item">
         <div class="exp-yr">2022 —<br>Present</div>
         <div>
           <div class="exp-co">KleinS GmbH</div>
           <div class="exp-role">Senior Project & Account Manager · Düsseldorf</div>
-          <div class="exp-desc">Full commercial cycle management for 25+ APAC brands entering European markets. Client portfolio includes EcoFlow, OPPO, Anker, XGIMI, JD.com, Alibaba, Geek+, Xpeng, Aiko, AgiBot, MOVA, and more — across 10+ markets including Germany, France, Benelux, Eastern Europe, and the Nordics.<br><br>Led EcoFlow's shop-in-shop programme at MediaMarkt Tech Village: build specifications, retail compliance negotiation, POSM sourcing and adaptation, and 8 months of ongoing promotional operations and in-store consumer activation events.<br><br>Directed major brand events: AIKO's European dealer conference at Intersolar Munich, AgiBot's first European product launch, MOVA debut launches in Northern and Eastern Europe, Xpeng pop-up activations across three Eastern European markets. Exhibition management at Genera Spain, Rimini Key Energy, Frankfurt IMEX, and Paris Motor Show.</div>
+          <div class="exp-desc">Full commercial cycle management for 25+ APAC brands entering European markets. Client portfolio includes EcoFlow, OPPO, Jackery, Anker, XGIMI, JD.com, Alibaba, Geek+, Xpeng, Aiko, AgiBot, MOVA, DJI, Huawei, OnePlus, Roborock, NIO, and more — across 10+ markets including Germany, France, Benelux, Eastern Europe, and the Nordics.<br><br>
+          Led EcoFlow's shop-in-shop programme at MediaMarkt Tech Village: build specifications, retail compliance negotiation, POSM sourcing and adaptation, and 8 months of ongoing promotional operations and in-store consumer activation events.<br><br>
+          Directed major brand events: AIKO's European dealer conference at Intersolar Munich, AgiBot's first European product launch, MOVA debut launches in Northern and Eastern Europe, Xpeng pop-up activations across three Eastern European markets. Exhibition management at Genera Spain, Rimini Key Energy, Frankfurt IMEX, and Paris Motor Show.</div>
           <div class="exp-tags">
             <span class="etag">APAC–Europe BD</span>
             <span class="etag">Account Management</span>
@@ -252,12 +282,13 @@ footer{background:var(--navy);padding:2rem 3rem;display:flex;align-items:center;
           </div>
         </div>
       </div>
+
       <div class="exp-item">
         <div class="exp-yr">2021 —<br>Present</div>
         <div>
           <div class="exp-co">Independent Entrepreneur</div>
           <div class="exp-role">Founder · B2B Cross-Border Trade</div>
-          <div class="exp-desc">Exploring a B2B trade business bridging manufacturers with import markets in Africa and beyond. Demand-first approach: researching market needs, building supplier relationships, and validating product categories through direct conversations with importers and distributors.</div>
+          <div class="exp-desc">Exploring a B2B trade business bridging Chinese manufacturers with import markets in Africa and beyond. Demand-first approach: researching market needs, building supplier relationships, and validating product categories through direct conversations with importers and distributors. Leveraging Mandarin language ability, European base, and factory relationships built over years of APAC client work.</div>
           <div class="exp-tags">
             <span class="etag">Entrepreneurship</span>
             <span class="etag">Trade Strategy</span>
@@ -266,12 +297,13 @@ footer{background:var(--navy);padding:2rem 3rem;display:flex;align-items:center;
           </div>
         </div>
       </div>
+
       <div class="exp-item">
         <div class="exp-yr">Earlier</div>
         <div>
           <div class="exp-co">DAAD</div>
           <div class="exp-role">Research Associate</div>
-          <div class="exp-desc">Research role at the German Academic Exchange Service (DAAD), contributing to academic and policy-oriented research projects. Developed skills in structured analysis, report writing, and working within institutional frameworks.</div>
+          <div class="exp-desc">Research role at the German Academic Exchange Service (DAAD), contributing to academic and policy-oriented research projects. Developed skills in structured analysis, report writing, and working within institutional frameworks — foundational experience that informs a rigorous, evidence-based approach to commercial problem-solving.</div>
           <div class="exp-tags">
             <span class="etag">Research</span>
             <span class="etag">Academic Analysis</span>
@@ -280,16 +312,17 @@ footer{background:var(--navy);padding:2rem 3rem;display:flex;align-items:center;
           </div>
         </div>
       </div>
+
       <div class="proj-grid">
         <div class="proj-card">
           <div class="proj-cat">EcoFlow · Retail Media</div>
           <div class="proj-name">MediaMarkt Shop-in-Shop Programme</div>
-          <div class="proj-body">End-to-end retail programme: build specs, POSM adaptation, retail compliance negotiation, and 8 months of promotional operations and in-store consumer activation events at MediaMarkt Tech Village.</div>
+          <div class="proj-body">End-to-end retail programme: build specs, POSM adaptation, retail compliance negotiation, and 8 months of ongoing promotional operations and in-store consumer activation events at MediaMarkt Tech Village.</div>
         </div>
         <div class="proj-card">
           <div class="proj-cat">AIKO · Events</div>
           <div class="proj-name">European Dealer Conference — Intersolar Munich</div>
-          <div class="proj-body">Full organisation of AIKO's European dealer conference at Intersolar Munich. Venue, programme, partner coordination, and on-site brand execution.</div>
+          <div class="proj-body">Full organisation of AIKO's European dealer conference at Intersolar Munich — Europe's leading solar trade show. Venue, programme, partner coordination, and on-site brand execution.</div>
         </div>
         <div class="proj-card">
           <div class="proj-cat">AgiBot · Launch</div>
@@ -304,6 +337,8 @@ footer{background:var(--navy);padding:2rem 3rem;display:flex;align-items:center;
       </div>
     </div>
   </div>
+
+  <!-- CLIENT LOGOS -->
   <div class="clients-sec">
     <div class="clients-label">Clients I've worked with</div>
     <div class="logos-grid">
@@ -331,6 +366,7 @@ footer{background:var(--navy);padding:2rem 3rem;display:flex;align-items:center;
   </div>
 </div>
 
+<!-- ── SKILLS ── -->
 <div class="page" id="skills">
   <div class="sec">
     <div class="sec-inner">
@@ -373,12 +409,13 @@ footer{background:var(--navy);padding:2rem 3rem;display:flex;align-items:center;
           <div class="skill-row"><span class="skill-name">Feishu / Lark</span><div class="skill-bar"><div class="skill-fill" style="width:92%"></div></div></div>
         </div>
       </div>
+
       <div style="margin-top:4rem">
         <div class="sec-label" style="margin-bottom:1.5rem">Education & Certifications</div>
         <div class="cert-card">
           <div>
             <div class="cert-name">Doctoral Studies — Freie Universität Berlin</div>
-            <div class="cert-sub">PhD-level research in political economy — rigorous analytical and research frameworks</div>
+            <div class="cert-sub">PhD-level research in political economy — developed rigorous analytical and research frameworks</div>
           </div>
           <div class="cert-yr">FU</div>
         </div>
@@ -392,7 +429,7 @@ footer{background:var(--navy);padding:2rem 3rem;display:flex;align-items:center;
         <div class="cert-card">
           <div>
             <div class="cert-name">Bachelor's — International Political Economy</div>
-            <div class="cert-sub">Undergraduate degree including data analytics, market research, and business statistics</div>
+            <div class="cert-sub">Undergraduate degree including data analytics, market research, and business statistics modules</div>
           </div>
           <div class="cert-yr">BA</div>
         </div>
@@ -408,6 +445,7 @@ footer{background:var(--navy);padding:2rem 3rem;display:flex;align-items:center;
   </div>
 </div>
 
+<!-- ── CONTACT ── -->
 <div class="page" id="contact">
   <div class="sec">
     <div class="sec-inner">
